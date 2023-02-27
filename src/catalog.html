@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Sportif"
+})
+<body>
+  @@include('html/header.html',{})
+  @@include('html/basket.html',{})
+  <div class="container container__search-link">
+    <ul class="catalog__links">
+      <li><img src="./img/icon/home.png" alt="home"> <a href="./index.html">Home</a></li>
+      <li class="catalog__links-arrow">></li>
+      <li><a href="./catalog.html">Catalog</a></li>
+    </ul>
+    <div class="catalog__search">
+      <input type="search" name="search" placeholder="SEARCH" id="search__product">
+    </div>
+  </div>
+  <main class="container container-gray">
+    <div class="catalog">
+<!--      filters-->
+      <div class="catalog__filter-container filter_hide">
+        <div class="catalog__filter">
+          <ul>
+            <li class="dropdown">
+              <div class="dropdown__filter">Size <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+                <div class="menu-size">
+
+                </div>
+                <button class="button__clear" id="clear-size">Clear</button>
+              </div>
+              <hr>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown__filter">Color <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+                <div class="menu-color">
+
+                </div>
+                <button class="button__clear" id="clear-color">Clear</button>
+              </div>
+              <hr>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown__filter">Type <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+                <div class="menu-type">
+
+                </div>
+              </div>
+              <hr>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown__filter">Price <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+                <div class="menu-price">
+                  <input class="input-text" type="text" value="" id="price-min" placeholder="Min">
+                  <span>-</span>
+                  <input class="input-text" type="text" value="" id="price-max" placeholder="Max">
+                  <span>Usd</span>
+                </div>
+              </div>
+              <hr>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown__filter">Rating <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+                <div class="menu__rating">
+                  <span>Min rating</span>
+                  <input class="input-text" type="number" value="" id="set_rating" placeholder="Rating" min="0" max="5">
+                  <span>Stars</span>
+                </div>
+              </div>
+              <hr>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown__filter">collections <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="filter__icon">
+          <img src="./img/icon/filter.png" alt="filter">
+        </div>
+      </div>
+<!--product and pagination-->
+      <div class="catalog__desk">
+      <div class="catalog__pagination">
+
+      </div>
+      <div class="pagination__buttons">
+        <div class="pagination__buttons-list">
+
+        </div>
+        <div class="pagination__arrow_next">
+          <span> &rsaquo; </span>
+        </div>
+      </div>
+      </div>
+    </div>
+    <a href="#header" class="excellence__arrow-up" data-arrow-up="">
+      <img src="./img/icon/Arrow.svg" alt="Arrow">
+    </a>
+  </main>
+  @@include('html/footer.html',{})
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.4.0/rxjs.umd.min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+@import "mixins";
+@import "variables";
+//style for footer
+.background-red {
+  background-color: $base-color;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  @include font_style('Oswald', 400, 1.8rem);
+  color: $second-color;
+  a {
+    color: $second-color;
+  }
+  li {
+    line-height: 180.8%;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  h4 {
+    @include font_style('Oswald', 600, 2.4rem);
+    text-transform: uppercase;
+  }
+  form {
+    position: relative;
+    padding-top: 3.5rem;
+    width: 100%;
+    input {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      padding-left: 2rem;
+      margin: 1rem 0;
+      display: block;
+      width: 100%;
+      height: 6rem;
+      &::placeholder {
+        color: $base-color;
+      }
+    }
+  }
+  &__button {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    background-color: $base-color;
+    color: $second-color;
+    border: none;
+    position: absolute;
+    top: 60%;
+    left: 58%;
+    padding: 1.2rem 0;
+    width: 40%;
+    transition: all .4s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+  }
+}
+
+//copyrighting section
+.copyrighting {
+  @include font_style('Oswald', 400, 1.4rem);
+  color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 0;
+}
+
+@media (max-width: 1270px) {
+  .footer {
+    font-size: 1.2rem;
+    h4 {
+      font-size: 1.8rem;
+    }
+  }
+  .copyrighting {
+    font-size: 1.1rem;
+    padding: .5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4 {
+      font-size: 2.2rem;
+      padding-top: 1.5rem;
+    }
+  }
+  .footer__menu {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}

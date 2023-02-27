@@ -1,0 +1,487 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+//global style
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+}
+body {
+	@include font_style();
+	margin: 0;
+	padding: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+.container {
+	padding-left: 6rem;
+	padding-right: 6rem;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.background {
+	background-color: #F1F1F1;
+}
+
+
+//style for main screen banner and text
+.banner {
+	@include flex_between;
+	padding-top: 7rem;
+	padding-bottom: 9rem;
+	.right {
+		padding-right: 3rem;
+	}
+	.left {
+		padding-left: 6rem;
+	}
+	&__content {
+		align-self: center;
+	}
+	&__title {
+		@include font_style('Oswald', 700, 6.5rem);
+		color: #001F3D;
+	}
+	&__descr {
+		@include font_style('Open Sans', 300, 2.4rem);
+		color: #000;
+		padding-bottom: 3rem;
+		line-height: 3.3rem;
+	}
+	&__button {
+		@include button_banner;
+		padding: .9rem 1.2rem;
+		width: 24rem;
+		height: 5rem;
+	}
+	&__img {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+//style for the product card
+.production {
+	padding-top: 8rem;
+	text-align: center;
+	color: #333;
+	padding-bottom: 8rem;
+	&__title {
+		@include font_style('Oswald', 500, 3.6rem);
+		margin: 0;
+	}
+	&__descr {
+		@include font_style('Oswald', 500, 6.4rem);
+		padding-top: 1.5rem;
+		margin: 0;
+	}
+}
+.production__card {
+	padding-top: 2.3rem;
+	@include flex_between;
+}
+.card {
+	@include card;
+	width: 21.5%;
+	padding: 3.1rem 5rem;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+	&__img {
+		padding-bottom: .5rem;
+		img {
+			width: 100%;
+		}
+	}
+	&__title {
+		padding-bottom: .5rem;
+		text-align: center;
+	}
+	&__text-container {
+		display: flex;
+		flex-direction: column;
+        align-items: center;
+	}
+	&__size {
+		display: none;
+		gap: 5px;
+		span {
+			font-size: 1.5rem;
+		}
+	}
+	&__price {
+		padding-top: .5rem;
+		padding-bottom: 1.5rem;
+	}
+	&__buy {
+		padding: .7rem 1rem;
+	}
+	&__color {
+		gap: 5px;
+		padding-bottom: 1rem;
+		display: none;
+	}
+	input {
+		display: none;
+		&:checked+label {
+			color: $base-color;
+			box-shadow: 0 0 1.4rem rgba($base-color, 0.5);
+			border: 1px solid $base-color;
+		}
+	}
+	label {
+		border: 1px solid #D1D1D1;
+		height: 20px;
+		width: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+//style for collections and sale
+.collection {
+	padding-top: 10.7rem;
+	padding-bottom: 10.8rem;
+	@include flex_between;
+	text-align: center;
+	&__card {
+		width: 47%;
+	}
+	&__img {
+		height: 55.6rem;
+		display: flex;
+		justify-content: center;
+		&-text {
+			align-self: flex-end;
+			height: 8.6rem;
+			line-height: 8.6rem;
+			width: 100%;
+			background-color: rgba($base-color, 0.8);
+			@include font_style('Oswald', 500, 3.6rem);
+			color: $second-color;
+		}
+	}
+	.left {
+		background: url("../img/ecoths.png") center center/cover no-repeat;
+	}
+	.right {
+		background: url("../img/powell_print.png") center center/cover no-repeat;
+	}
+	&__descr {
+		padding-top: 3.5rem;
+		@include font_style('Open Sans', 300, 2.4rem);
+	}
+	&__button {
+		@include button_banner;
+		margin-top: 2.5rem;
+		padding: .9rem 1.8rem;
+		width: 36.6rem;
+	}
+}
+
+.collection__button-aling {
+	display: flex;
+	justify-content: center;
+}
+
+//style for SPORTIF ORIGINAL PANT
+.background-image {
+	background: url("../img/backgroung/wood.jpeg") center center/cover no-repeat;
+}
+.sportif {
+	padding-top: 2.2rem;
+	padding-bottom: 4rem;
+	width: 39%;
+	color: $second-color;
+	&__title {
+		@include font_style('Oswald', 700, 6.5rem);
+		line-height: 9.6rem;
+		margin: 0;
+	}
+	&__descr {
+		@include font_style('Open Sans', 300, 2.4rem);
+		line-height: 3.3rem;
+		padding-bottom: 3rem;
+	}
+	&__button {
+		color: $second-color;
+		padding: .9rem 2.1rem;
+		background-color: $base-color;
+		@include font_style('Open Sans', 300, 2.4rem);
+	}
+}
+
+//style for STAY IN TREND
+.trend {
+	margin-top: 10rem;
+	padding-top: 3rem;
+	padding-bottom: 9rem;
+	background: url("../img/backgroung/red.png") center 1% repeat-x;
+	text-align: center;
+	&__title {
+		@include font_style('Oswald', 700, 6.5rem);
+		color: $second-color;
+	}
+}
+.trend__card {
+	@include flex_between;
+	padding-left: 8.9rem;
+	padding-right: 8.9rem;
+	.card {
+		border: 1px solid $base-color;
+		width: 29%;
+		padding: 2rem 2rem 3.6rem 2rem;
+		&__img {
+			padding-bottom: 1.5rem;
+		}
+		&__title {
+			padding-bottom: 1.5rem;
+		}
+		&__buy {
+			width: 80%;
+			padding: .8rem 0;
+		}
+	}
+}
+
+//style for 50 years excellence
+.excellence {
+	padding-bottom: 8.9rem;
+	@include font_style('Open Sans', 300, 2.4rem);
+	text-align: center;
+	&__title {
+		@include font_style('Oswald', 700, 6.5rem);
+		color: #001F3D;
+		margin: 0;
+	}
+	&__button {
+		@include button_banner;
+		display: inline-block;
+		margin-top: 3.5rem;
+		padding: 1.1rem 7.3rem;
+	}
+}
+.excellence__arrow-up {
+	width: 8.3rem;
+	height: 8.3rem;
+	background-color: $base-color;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 90%;
+	left: 90%;
+	z-index: 9;
+}
+.hidden {
+	display: none;
+}
+
+@media (max-width: 1270px) {
+	.banner {
+		&__title {
+			font-size: 4.75rem;
+		}
+		&__descr {
+			font-size: 2.2rem;
+		}
+	}
+	.trend__card {
+		padding: 0 2.8rem;
+	}
+	.production__card {
+		.card {
+			padding: 2rem 1rem;
+			&__title {
+				font-size: 2rem;
+			}
+			&__buy {
+				font-size: 1.5rem;
+			}
+		}
+	}
+	.sportif {
+		width: 75%;
+	}
+}
+
+@media (max-width: 1170px) {
+	.trend__title {
+		font-size: 5.5rem;
+	}
+	.trend__card {
+		padding: 0 2rem;
+		.card {
+			&__title {
+				font-size: 1.75rem;
+			}
+			&__buy {
+				font-size: 1.5rem;
+			}
+		}
+	}
+	.production {
+		&__title {
+            font-size: 2.8rem;
+        }
+		&__descr {
+			font-size: 3.7rem;
+		}
+	}
+}
+
+@media (max-width: 980px) {
+	.banner {
+		&__title {
+			font-size: 3.5rem;
+		}
+		&__descr {
+			font-size: 1.8rem;
+		}
+		&__button {
+			font-size: 1.9rem;
+		}
+	}
+	.production {
+		&__title {
+			font-size: 3rem;
+		}
+		&__descr {
+			font-size: 3.8rem;
+		}
+		&__card {
+			flex-direction: column;
+			align-items: center;
+			.card {
+				width: 77%;
+				margin-bottom: 1.5rem;
+				&__title {
+					font-size: 1.75rem;
+				}
+			}
+		}
+	}
+	.collection {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&__card {
+			width: 100%;
+			&:nth-child(1) {
+				margin-bottom: 2rem;
+			}
+		}
+		&__img-text {
+			font-size: 2.7rem;
+		}
+		&__button {
+			font-size: 1.85rem;
+			width: 30rem;
+		}
+	}
+
+	.sportif {
+		width: 100%;
+		text-align: center;
+		&__title {
+			font-size: 4.5rem;
+		}
+		&__descr {
+			font-size: 2.8rem;
+		}
+		&__button {
+			font-size: 2.2rem;
+		}
+	}
+
+	.trend__title {
+		font-size: 4.5rem;
+	}
+	.trend__card {
+		padding: 0 1.5rem;
+		.card {
+			padding-bottom: 1.6rem;
+			&__title {
+				font-size: 1.4rem;
+			}
+			&__buy {
+				font-size: 1.1rem;
+			}
+			&__img {
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 0 2rem;
+	}
+	.banner {
+		display: flex;
+		flex-direction: column;
+		&__title {
+			font-size: 4.5rem;
+		}
+		&__descr {
+			font-size: 2rem;
+		}
+		&__content {
+			padding-left: .2rem;
+		}
+		.left {
+			padding-left: .2rem;
+		}
+	}
+	.banner-main {
+		flex-direction: column-reverse;
+	}
+
+	.sportif {
+		&__title {
+			font-size: 3.5rem;
+		}
+		&__descr {
+			font-size: 2rem;
+		}
+		&__button {
+			font-size: 1.65rem;
+		}
+	}
+	.trend__card {
+		display: flex;
+		flex-direction: column;
+        align-items: center;
+		.card {
+			width: 75%;
+			&:nth-child(2) {
+				margin: 1.5rem 0;
+			}
+		}
+	}
+}
+
+
+@import "catalog";
+//import mixins
+@import "header";
+@import "footer";
+@import "basket";
+@import "itemPage";
+

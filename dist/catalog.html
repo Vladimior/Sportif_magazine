@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <script src="https://kit.fontawesome.com/2fbd007500.js" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" href="css/style.min.css">
+	<title>Sportif</title>
+</head>
+<body>
+  <header class="header" data-header id="header">
+    <div class="container header__container">
+        <a href="./index.html"><img src="./img/logo/logo.png" alt="logo" class="header__logo"></a>
+        <div class="header__menu menu">
+            <div class="menu__icon" data-icon>
+                <div class="menu__icon__line"></div>
+            </div>
+            <nav class="menu__body" data-menu>
+                <ul class="menu__list">
+                    <li class="menu__list__item">
+                        <a href="./catalog.html?id=short" class="menu__link">Short</a>
+                    </li>
+                    <li class="menu__list__item">
+                        <a href="./catalog.html?id=pants" class="menu__link">Pants</a>
+                    </li>
+                    <li class="menu__list__item">
+                        <a href="./catalog.html?id=shirt" class="menu__link">Shirt</a>
+                    </li>
+                    <li class="menu__list__item">
+                        <a href="./catalog.html?id=accessories" class="menu__link">Accessories</a>
+                    </li>
+                    <li class="menu__list__item">
+                        <a href="./catalog.html" class="menu__link">Sale</a>
+                    </li>
+                    <li class="menu__list__item backed">
+                        <a href="#" class="menu__link" data-basket><i class="fa-solid fa-basket-shopping"></i><span id="basket__item"></span></a>
+                    </li>
+                    <li class="menu__list__item">
+                        <form action="#">
+                            <input class="menu__search" placeholder="SEARCH ENTIRE STORE HERE" type="search">
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+  <div class="basket">
+    <div class="basket__dialog">
+        <div class="basket__content">
+            <form action="#">
+                <div class="basket__close" data-close>&times;</div>
+                <div class="basket__title">Корзина товарів</div>
+                <div class="basket__product">
+
+                </div>
+                <div class="basket__footer">
+                    <div class="basket__totat_price">
+                    </div>
+                    <button class="basket__button">
+                        Order
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+  <div class="container container__search-link">
+    <ul class="catalog__links">
+      <li><img src="./img/icon/home.png" alt="home"> <a href="./index.html">Home</a></li>
+      <li class="catalog__links-arrow">></li>
+      <li><a href="./catalog.html">Catalog</a></li>
+    </ul>
+    <div class="catalog__search">
+      <input type="search" name="search" placeholder="SEARCH" id="search__product">
+    </div>
+  </div>
+  <main class="container container-gray">
+    <div class="catalog">
+<!--      filters-->
+      <div class="catalog__filter-container filter_hide">
+        <div class="catalog__filter">
+          <ul>
+            <li class="dropdown">
+              <div class="dropdown__filter">Size <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+                <div class="menu-size">
+
+                </div>
+                <button class="button__clear" id="clear-size">Clear</button>
+              </div>
+              <hr>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown__filter">Color <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+                <div class="menu-color">
+
+                </div>
+                <button class="button__clear" id="clear-color">Clear</button>
+              </div>
+              <hr>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown__filter">Type <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+                <div class="menu-type">
+
+                </div>
+              </div>
+              <hr>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown__filter">Price <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+                <div class="menu-price">
+                  <input class="input-text" type="text" value="" id="price-min" placeholder="Min">
+                  <span>-</span>
+                  <input class="input-text" type="text" value="" id="price-max" placeholder="Max">
+                  <span>Usd</span>
+                </div>
+              </div>
+              <hr>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown__filter">Rating <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+                <div class="menu__rating">
+                  <span>Min rating</span>
+                  <input class="input-text" type="number" value="" id="set_rating" placeholder="Rating" min="0" max="5">
+                  <span>Stars</span>
+                </div>
+              </div>
+              <hr>
+            </li>
+            <li class="dropdown">
+              <div class="dropdown__filter">collections <i class="fa-solid fa-chevron-up"></i></div>
+              <div class="dropdown__menu">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="filter__icon">
+          <img src="./img/icon/filter.png" alt="filter">
+        </div>
+      </div>
+<!--product and pagination-->
+      <div class="catalog__desk">
+      <div class="catalog__pagination">
+
+      </div>
+      <div class="pagination__buttons">
+        <div class="pagination__buttons-list">
+
+        </div>
+        <div class="pagination__arrow_next">
+          <span> &rsaquo; </span>
+        </div>
+      </div>
+      </div>
+    </div>
+    <a href="#header" class="excellence__arrow-up" data-arrow-up="">
+      <img src="./img/icon/Arrow.svg" alt="Arrow">
+    </a>
+  </main>
+  <footer>
+    <!--footer section-->
+    <div class="container background-red">
+<!--menu footer-->
+        <nav class="footer">
+            <div class="footer__menu">
+                <h4>ORDERING ONLINE</h4>
+                <ul>
+                    <li><a href="#">Account Login</a></li>
+                    <li><a href="#">Our Guarantee</a></li>
+                    <li><a href="#">Sportif Stretch Guide</a></li>
+                    <li><a href="#">Size Chart & Sizing Information</a></li>
+                    <li><a href="#">Hemming Information</a></li>
+                    <li><a href="#">Ordering & Payment</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu">
+                <h4>ABOUT SPORTIF</h4>
+                <ul>
+                    <li><a href="#">COVID-19 Response</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Legacy</a></li>
+                    <li><a href="#">Good Sam Program</a></li>
+                    <li><a href="#">Privacy & Security</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shop Online Catalog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu">
+                <h4>GET TO KNOW US</h4>
+                <p>Sign up for our weekly newsletter and get a 10% off coupon by email for your first order!</p>
+                <form action="#">
+                    <label for="email">Sign Up for Our Newsletter:</label>
+                    <input type="email" name="email" id="email" placeholder="EMAIL ADDRESS">
+                    <button class="footer__button" type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <!--copyrighting-->
+    <div class="container">
+        <div class="copyrighting">
+            ©2021 Sportif Mailorder. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.4.0/rxjs.umd.min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+</html>
